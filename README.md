@@ -6,7 +6,8 @@ AtCoder学習用リポジトリです。
 ~~AtCoder Beginners Selectionから始めています。(Begin:2024/02/28)
 <https://atcoder.jp/contests/abs>~~
 <br>
-上記が一通り終わって放置していましたが、また始めたいと思います。
+<br>s
+↑上記が一通り終わって放置していましたが、また始めたいと思います。
 <br>
 次は競プロ典型 90 問を進めていきます。（Begin:2024/08/21）
 <https://atcoder.jp/contests/typical90>
