@@ -1,31 +1,45 @@
 #include<iostream>
+#include<string>
+#include<cmath>
 
 using namespace std;
 
-int Caluculator(int);
+string Caluculator_829(string);
+string Change_825(string);
 
 int main(){
-    int N,K;
-    cin>>N>>K;
+    int K;
+    long long input;
+    string N_8,N_9,ans;
+    cin>>input>>K;
+    N_8=to_string(input);
+    for(int i=0;i<K;i++){
+        N_9=Caluculator_829(N_8);
+        N_8=Change_825(N_9);
+    }
+    cout<<N_8<<endl;
 }
 
-int Caluculator(int number){
-    int N_10=0;
-    int count_8=1;
-    int digit_10;
-    int digit_9;
-    while(number>0){
-        digit_10=number%10;
-        N_10+=digit_10*count_8;
-        number/=10;
-        count_8*=8;
-    }
-    digit_9=9;
-    while(N_10>digit_9*9){
-        digit_9*=9;
+//8進数を9進数に変換
+string Caluculator_829(string N){
+    string N_9;
+    long long N_10=0;
+    //Nの文字数だけ繰り返す
+    for(int i=0;i<N.size();i++){
+        N_10+=(N[N.size()-i-1]-'0')*pow(8,i);
     }
     while(N_10>0){
-        N_10-
+        N_9.insert(0,to_string(N_10%9));
+        N_10/=9;
     }
-    
+    return N_9;
+}
+
+string Change_825(string N){
+    for(int i=0;i<N.size();i++){
+        if(N[i]=='8'){
+            N[i]='5';
+        }
+    }
+    return N;
 }
