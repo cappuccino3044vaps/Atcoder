@@ -1,4 +1,3 @@
-
 import numpy as np
 
 #グローバル変数として使用：(int)最大値
